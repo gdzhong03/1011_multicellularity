@@ -20,4 +20,3 @@ Contains scripts used to analyze genotypes associated with multicellularity:
 
 1. `Preprocessing/Pheno_normalization_GWAS.ipynb`: Reorders phenotype values to match strain IDs, applies Yeo–Johnson or quantile normalization while preserving missing-value codes, plots normalization diagnostics, and exports GWAS-ready phenotype files.
 2. `GWAS_FastLMM.ipynb`: Runs a single-SNP FastLMM GWAS while excluding chromosome 17 from association testing and kinship estimation, then saves complete and thresholded results plus Manhattan and Q–Q plots.
-3. `map_gwas_snps_to_genes.ipynb`: Maps GWAS SNP positions to overlapping genes from GFF3 annotations and labels each SNP as gene-associated, intergenic, or on an unannotated sequence.
