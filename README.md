@@ -20,3 +20,4 @@ Contains scripts used to analyze genotypes associated with multicellularity:
 
 1. `Preprocessing/Pheno_normalization_GWAS.ipynb`: Reorders phenotype values to match strain IDs, applies Yeo–Johnson or quantile normalization while preserving missing-value codes, plots normalization diagnostics, and exports GWAS-ready phenotype files.
 2. `GWAS_FastLMM.ipynb`: Runs a single-SNP FastLMM GWAS while excluding chromosome 17 from association testing and kinship estimation, then saves complete and thresholded results plus Manhattan and Q–Q plots.
+3. `permutation test for GWAS.ipynb`: Generates 100 reproducible phenotype permutations while keeping strain IDs and missing-value positions fixed, runs FastLMM on the shuffled phenotypes, and saves the permutation GWAS p-values. The final empirical threshold is selected manually in Excel by retaining the lowest 5% of permutation p-values and choosing the highest p-value in that subset.
