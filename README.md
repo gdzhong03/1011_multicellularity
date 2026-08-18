@@ -8,11 +8,13 @@ Contains scripts used to analyze multicellular phenotypes:
 1. `Preprocessing/split image.ipynb`: Splits a full 96-well plate image into an 8 × 12 grid of individual well images; it can process either one image or every TIFF image in a folder.
 2. `CCM_Model_Train.ipynb`: Trains and evaluates a seven-class convolutional neural network (CNN) image classifier for complex colony morphology (CCM) phenotypes, generates a confusion matrix, and exports the trained model.
 3. `CCM_Model_Predict.ipynb`: Uses the trained seven-class CCM model to classify well images, sorts copies into predicted-class folders, and saves class and confidence results to Excel.
-4. `PSH_Categorization_Model_Train.ipynb`: Trains and evaluates a four-class convolutional neural network (CNN) model that categorizes well images as: no growth, no PSH (pseudohyphal growth), PSH, or contamination, then exports the model.
+4. `PSH_Categorization_Model_Train.ipynb`: Trains and evaluates a four-class convolutional neural network (CNN) model that categorizes colony images as: no growth, no PSH (pseudohyphal growth), PSH, or contamination, then exports the model.
 5. `PSH_Categorization_Model_Predict.ipynb`: Uses the trained four-class CNN model to classify well images, sorts copies into predicted-class folders, and saves class and confidence results to Excel.
 6. `PSH_quantification.ipynb`: Segments the colony center and surrounding pseudohyphal growth in each well image, calculates social growth as the outer-growth area relative to the center, and saves masks and an Excel summary.
-7. `Phylogenetically Corrected Correlation Analysis/PhylogeneticComparisons.R`: Tests phylogenetic signal with Pagel's lambda and evaluates relationships among multicellular traits using phylogenetically independent contrasts and phylogenetic generalized least-squares models.
-8. `Phylogenetically Corrected Correlation Analysis/phyloCorrelationMatrixPCA.R`: Calculates a phylogenetically corrected trait-correlation matrix from independent contrasts, visualizes the correlations, and performs PCA on the corrected traits.
+7. `IG_quantification.py`: Enhances the contrast of the well images, counts the number of pixels that exceed a threshold set by the user, use the number of pixels that exceed the threshold to represent cells growing invasively.
+8. `PA_quantification.py`: Enhances the contrast of the well images, counts the number of pixels that exceed a threshold set by the user, use the number of pixels that exceed the threshold to represent cells displaying plastic adherence.
+9. `Phylogenetically Corrected Correlation Analysis/PhylogeneticComparisons.R`: Tests phylogenetic signal with Pagel's lambda and evaluates relationships among multicellular traits using phylogenetically independent contrasts and phylogenetic generalized least-squares models.
+10. `Phylogenetically Corrected Correlation Analysis/phyloCorrelationMatrixPCA.R`: Calculates a phylogenetically corrected trait-correlation matrix from independent contrasts, visualizes the correlations, and performs PCA on the corrected traits.
 
 ## Genotyping
 
