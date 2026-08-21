@@ -1,4 +1,4 @@
-setwd("/Users/helldawg/Helen/Work/Projects/1000genomes/Tree")
+setwd("path/to/project")
 
 #This rscript is based on: https://www.zoology.ubc.ca/~schluter/R/Phylogenetic.html#:~:text=in%20trait%20%22x%22-,Independent%20contrasts,data%20points%20resulting%20from%20phylogeny.
 
@@ -9,7 +9,7 @@ library(nlme)
 library(visreg)
 
 #Get the tree
-mytree <- read.tree("S.c.tree")
+mytree <- read.tree("path/to/input/S.c.tree")
 
 #Make it dichotomous (necessary for ape to calculate things); not necessary for other packages
 mytree=multi2di(mytree)
@@ -27,7 +27,7 @@ range(mytree$edge.length) # shortest and longest branch
 #Look at the tree
 plot(mytree, cex=0.7)
 
-mydata <-read.csv("1000GenomeS.cerevisiaeMulticellularMasterForTree.csv", header=TRUE)
+mydata <-read.csv("path/to/input/1000GenomeS.cerevisiaeMulticellularMasterForTree.csv", header=TRUE)
 
 #Set the row names to be the strain names
 row.names(mydata) <- mydata$Standardized_name

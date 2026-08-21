@@ -19,7 +19,7 @@ import numpy
 
 #Specify the location of the files, which will be in "data" if splitrows.py was run.
 #In the same directory, make sure there is a directory called "processedimages".
-os.chdir('/Users/helldawg/Helen/Work/Projects/Predation-Multicellularity-Armaan/ImageAnalysis/data')
+os.chdir('path/to/input')
 
 adherencedata= []
 white_pixels= []
@@ -80,10 +80,10 @@ for images in final_list:
             else:
                 AdherenceWell[i][j] = 0
 
-    skimage.io.imsave('/Users/helldawg/Helen/Work/Projects/Predation-Multicellularity-Armaan/ImageAnalysis/processedimages/'+str(filenumber)+'-processed.jpg', AdherenceWell)     
+    skimage.io.imsave('path/to/output/'+str(filenumber)+'-processed.jpg', AdherenceWell)     
     adherence = len(white_x)
     adherencedata.append(adherence)
     print (filenumber)
     filenumber += 1
 
-numpy.savetxt('/Users/helldawg/Helen/Work/Projects/Predation-Multicellularity-Armaan/ImageAnalysis/invasivedata.txt', adherencedata)
+numpy.savetxt('path/to/output/invasivedata.txt', adherencedata)

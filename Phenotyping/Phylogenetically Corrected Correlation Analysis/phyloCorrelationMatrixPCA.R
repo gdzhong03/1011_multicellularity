@@ -4,9 +4,9 @@ library(corrplot)
 library(ggplot2)
 
 # Load tree and data
-mytree <- read.tree("S.c.tree")
+mytree <- read.tree("path/to/input/S.c.tree")
 mytree <- multi2di(mytree)
-mydata <- read.csv("1000GenomeS.cerevisiaeMulticellularMasterForTree.csv", header = TRUE)
+mydata <- read.csv("path/to/input/1000GenomeS.cerevisiaeMulticellularMasterForTree.csv", header = TRUE)
 rownames(mydata) <- mydata$Standardized_name
 
 # Select only the traits of interest
